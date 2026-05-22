@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>読書ペース計算・積読管理アプリ【無料】読了日予測・読書記録</title>
+  <meta name="description" content="読書ペース計算・積読管理アプリ。1日の読書ページ数から読了日を予測。積読本の管理、読書記録の保存も無料で対応。読書習慣を続けるためのツール。">
+  <link rel="canonical" href="https://appadaycreator.github.io/reading-pace-tracker/">
+  <meta property="og:title" content="読書ペース計算・積読管理アプリ【無料】読了日予測・読書記録">
+  <meta property="og:description" content="1日の読書ページ数から読了日を予測。積読本の管理、読書記録の保存も無料で対応。">
+  <meta property="og:url" content="https://appadaycreator.github.io/reading-pace-tracker/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","s3t9vl8h3v");</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans JP', 'Inter', sans-serif; background: linear-gradient(135deg, #1c1000 0%, #2d1f00 50%, #1c1000 100%); min-height: 100vh; color: #fff3e0; }
+    header { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 1rem 1.5rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    header h1 { font-size: 1.6rem; color: #fff; font-weight: 700; }
+    header p { font-size: 0.9rem; color: #ffcc80; margin-top: 0.3rem; }
+    main { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+    .card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .card h2 { font-size: 1.15rem; color: #fff; margin-bottom: 1rem; font-weight: 700; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.85rem; color: #ffcc80; font-weight: 600; }
+    .form-group input, .form-group select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.65rem 0.9rem; color: #fff; font-size: 1rem; font-family: inherit; }
+    .form-group input:focus { outline: none; border-color: #ff9800; }
+    .btn { display: block; width: 100%; padding: 0.85rem; background: linear-gradient(90deg, #e65100, #ff9800); color: #fff; font-size: 1rem; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; margin-top: 1rem; font-family: inherit; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.9; }
+    .btn-sm { padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 0; display: inline-block; width: auto; border-radius: 8px; }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .result-item { background: rgba(230,81,0,0.15); border: 1px solid rgba(230,81,0,0.3); border-radius: 12px; padding: 1rem; text-align: center; }
+    .result-item .label { font-size: 0.8rem; color: #ffcc80; }
+    .result-item .value { font-size: 1.4rem; font-weight: 700; color: #ffb74d; margin-top: 0.3rem; }
+    .result-item .unit { font-size: 0.8rem; color: #ffcc80; }
+    .progress-bar-wrap { margin: 1rem 0; }
+    .progress-label { display: flex; justify-content: space-between; font-size: 0.85rem; color: #ffcc80; margin-bottom: 0.4rem; }
+    .progress-bg { background: rgba(255,255,255,0.1); border-radius: 8px; height: 20px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #e65100, #ffb74d); border-radius: 8px; transition: width 0.5s ease; }
+    .book-list { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem; }
+    .book-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; }
+    .book-item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+    .book-title { font-size: 0.95rem; font-weight: 700; color: #fff; flex: 1; }
+    .book-status { font-size: 0.72rem; padding: 0.2rem 0.6rem; border-radius: 10px; font-weight: 600; white-space: nowrap; }
+    .status-reading { background: rgba(76,175,80,0.3); color: #a5d6a7; border: 1px solid rgba(76,175,80,0.4); }
+    .status-tsundoku { background: rgba(255,152,0,0.3); color: #ffe082; border: 1px solid rgba(255,152,0,0.4); }
+    .status-done { background: rgba(33,150,243,0.3); color: #90caf9; border: 1px solid rgba(33,150,243,0.4); }
+    .book-meta { font-size: 0.82rem; color: #ffcc80; margin-top: 0.3rem; }
+    .book-actions { display: flex; gap: 0.5rem; margin-top: 0.6rem; }
+    .action-btn { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #ccc; font-size: 0.78rem; padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; font-family: inherit; transition: all 0.2s; }
+    .action-btn:hover { background: rgba(230,81,0,0.3); border-color: #ff9800; color: #fff; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
+    .stat-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 0.8rem; text-align: center; }
+    .stat-box .sv { font-size: 1.5rem; font-weight: 700; color: #ffb74d; }
+    .stat-box .sl { font-size: 0.8rem; color: #ffcc80; margin-top: 0.2rem; }
+    .tips-list { list-style: none; }
+    .tips-list li { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; color: #ccc; }
+    .tips-list li::before { content: "📖 "; }
+    .hidden { display: none; }
+    footer { background: rgba(0,0,0,0.3); text-align: center; padding: 2rem 1rem; margin-top: 2rem; color: #888; font-size: 0.85rem; }
+    footer a { color: #ffcc80; text-decoration: none; }
+    footer .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
+    .add-form { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 0.5rem; align-items: end; }
+    @media (max-width: 600px) { .add-form { grid-template-columns: 1fr 1fr; } }
+    .add-form input, .add-form select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.55rem 0.7rem; color: #fff; font-size: 0.9rem; font-family: inherit; }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <h1>📚 読書ペース計算・積読管理</h1>
+  <p>読了日予測・積読本管理・読書記録をまとめて管理</p>
+</header>
+
+<main>
+  <!-- ペース計算 -->
+  <section class="card">
+    <h2>⏱️ 読書ペース・読了日計算</h2>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>本の総ページ数</label>
+        <input type="number" id="totalPages" value="300" min="1" step="1">
+      </div>
+      <div class="form-group">
+        <label>現在のページ数（読んだページ）</label>
+        <input type="number" id="currentPage" value="0" min="0" step="1">
+      </div>
+      <div class="form-group">
+        <label>1日に読むページ数（目標）</label>
+        <input type="number" id="dailyPages" value="20" min="1" step="1">
+      </div>
+      <div class="form-group">
+        <label>読書時間の目安（分/日）</label>
+        <input type="number" id="dailyMinutes" value="30" min="1" step="5">
+      </div>
+    </div>
+    <button class="btn" onclick="calcPace()">読了日を計算する</button>
+    <div id="paceResult" class="hidden">
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="label">残りページ数</div>
+          <div class="value" id="remainPages">-</div>
+          <div class="unit">ページ</div>
+        </div>
+        <div class="result-item">
+          <div class="label">読了まであと</div>
+          <div class="value" id="remainDays">-</div>
+          <div class="unit">日</div>
+        </div>
+        <div class="result-item">
+          <div class="label">読了予定日</div>
+          <div class="value" id="finishDate">-</div>
+          <div class="unit"></div>
+        </div>
+        <div class="result-item">
+          <div class="label">読書速度目安</div>
+          <div class="value" id="speedMin">-</div>
+          <div class="unit">ページ/分</div>
+        </div>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-label">
+          <span>読書進捗</span>
+          <span id="progressPct">0%</span>
+        </div>
+        <div class="progress-bg">
+          <div class="progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 積読管理 -->
+  <section class="card">
+    <h2>📖 積読・読書リスト管理</h2>
+    <div class="add-form" id="addForm">
+      <div class="form-group">
+        <label>タイトル</label>
+        <input type="text" id="bookTitle" placeholder="本のタイトル">
+      </div>
+      <div class="form-group">
+        <label>ページ数</label>
+        <input type="number" id="bookPages" value="300" min="1" step="1">
+      </div>
+      <div class="form-group">
+        <label>ステータス</label>
+        <select id="bookStatus">
+          <option value="tsundoku">積読</option>
+          <option value="reading">読書中</option>
+          <option value="done">読了</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>　</label>
+        <button class="btn btn-sm" onclick="addBook()">追加</button>
+      </div>
+    </div>
+    <div class="book-list" id="bookList">
+      <p style="color:#888;font-size:0.9rem;text-align:center;padding:1rem;">本を追加するとここに表示されます</p>
+    </div>
+  </section>
+
+  <!-- 読書統計 -->
+  <section class="card">
+    <h2>📊 読書統計</h2>
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-box"><div class="sv" id="statTotal">0</div><div class="sl">登録冊数</div></div>
+      <div class="stat-box"><div class="sv" id="statDone">0</div><div class="sl">読了済み</div></div>
+      <div class="stat-box"><div class="sv" id="statReading">0</div><div class="sl">読書中</div></div>
+      <div class="stat-box"><div class="sv" id="statTsundoku">0</div><div class="sl">積読</div></div>
+      <div class="stat-box"><div class="sv" id="statPages">0</div><div class="sl">読了総ページ</div></div>
+    </div>
+  </section>
+
+  <!-- 年間読書ペース診断 -->
+  <section class="card">
+    <h2>🎯 年間読書ペース診断</h2>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>1日の読書時間（分）</label>
+        <input type="number" id="diagMinutes" value="30" min="1" step="5">
+      </div>
+      <div class="form-group">
+        <label>1分あたりの読速（ページ）</label>
+        <input type="number" id="diagSpeed" value="0.7" min="0.1" step="0.1">
+      </div>
+    </div>
+    <button class="btn" onclick="calcYearly()">年間読書量を計算</button>
+    <div id="yearlyResult" class="hidden">
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="label">月間読了冊数</div>
+          <div class="value" id="monthlyBooks">-</div>
+          <div class="unit">冊/月</div>
+        </div>
+        <div class="result-item">
+          <div class="label">年間読了冊数</div>
+          <div class="value" id="yearlyBooks">-</div>
+          <div class="unit">冊/年</div>
+        </div>
+        <div class="result-item">
+          <div class="label">読書レベル</div>
+          <div class="value" id="readingLevel">-</div>
+          <div class="unit"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 読書のコツ -->
+  <section class="card">
+    <h2>💡 読書習慣を続けるコツ</h2>
+    <ul class="tips-list">
+      <li>「毎日10ページ」と決めると習慣化しやすい（完璧主義は禁物）</li>
+      <li>通勤・移動時間を読書時間に充てると効率アップ</li>
+      <li>電子書籍アプリを活用してどこでも読めるようにする</li>
+      <li>積読は「未来の自分へのプレゼント」として前向きに考える</li>
+      <li>読書メモを取ると記憶定着率が大幅に向上する</li>
+      <li>本の種類（小説・ビジネス・技術書）をバランスよく読む</li>
+      <li>読書会・ブッククラブに参加すると読書へのモチベーションが上がる</li>
+      <li>難しい本はPodcastや要約サービスで事前予習してから読む</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="links">
+    <a href="https://appadaycreator.github.io/book-forest/">本の森</a>
+    <a href="https://appadaycreator.github.io/book-recommendation/">本の推薦</a>
+    <a href="https://appadaycreator.github.io/flashcard-master/">フラッシュカード</a>
+    <a href="https://appadaycreator.github.io/okr-tracker/">OKRトラッカー</a>
+    <a href="https://appadaycreator.github.io/goal-roadmap-maker/">目標ロードマップ</a>
+  </div>
+  <p>© 2025 AppADayCreator</p>
+</footer>
+
+<script>
+  let books = JSON.parse(localStorage.getItem('readingBooks') || '[]');
+
+  function calcPace() {
+    const total = parseInt(document.getElementById('totalPages').value) || 0;
+    const current = parseInt(document.getElementById('currentPage').value) || 0;
+    const daily = parseInt(document.getElementById('dailyPages').value) || 0;
+    const minutes = parseInt(document.getElementById('dailyMinutes').value) || 0;
+    if (!total || !daily) { alert('値を入力してください'); return; }
+    const remain = Math.max(0, total - current);
+    const days = Math.ceil(remain / daily);
+    const finishDate = new Date();
+    finishDate.setDate(finishDate.getDate() + days);
+    const pct = Math.min(100, Math.round(current / total * 100));
+    const speed = (daily / minutes).toFixed(2);
+    document.getElementById('remainPages').textContent = remain.toLocaleString();
+    document.getElementById('remainDays').textContent = days.toLocaleString();
+    document.getElementById('finishDate').textContent = finishDate.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' });
+    document.getElementById('speedMin').textContent = speed;
+    document.getElementById('progressPct').textContent = pct + '%';
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('paceResult').classList.remove('hidden');
+  }
+
+  function addBook() {
+    const title = document.getElementById('bookTitle').value.trim();
+    const pages = parseInt(document.getElementById('bookPages').value) || 300;
+    const status = document.getElementById('bookStatus').value;
+    if (!title) { alert('タイトルを入力してください'); return; }
+    const book = { id: Date.now(), title, pages, status, addedAt: new Date().toLocaleDateString('ja-JP') };
+    books.unshift(book);
+    localStorage.setItem('readingBooks', JSON.stringify(books));
+    document.getElementById('bookTitle').value = '';
+    renderBooks();
+    renderStats();
+  }
+
+  function updateStatus(id, status) {
+    books = books.map(b => b.id === id ? { ...b, status } : b);
+    localStorage.setItem('readingBooks', JSON.stringify(books));
+    renderBooks();
+    renderStats();
+  }
+
+  function removeBook(id) {
+    if (!confirm('削除しますか？')) return;
+    books = books.filter(b => b.id !== id);
+    localStorage.setItem('readingBooks', JSON.stringify(books));
+    renderBooks();
+    renderStats();
+  }
+
+  function renderBooks() {
+    if (!books.length) {
+      document.getElementById('bookList').innerHTML = '<p style="color:#888;font-size:0.9rem;text-align:center;padding:1rem;">本を追加するとここに表示されます</p>';
+      return;
+    }
+    const statusLabel = { tsundoku: '積読', reading: '読書中', done: '読了' };
+    const statusClass = { tsundoku: 'status-tsundoku', reading: 'status-reading', done: 'status-done' };
+    document.getElementById('bookList').innerHTML = books.map(b => `
+      <div class="book-item">
+        <div class="book-item-header">
+          <div class="book-title">📗 ${b.title}</div>
+          <span class="book-status ${statusClass[b.status]}">${statusLabel[b.status]}</span>
+        </div>
+        <div class="book-meta">${b.pages}ページ・登録日: ${b.addedAt}</div>
+        <div class="book-actions">
+          <button class="action-btn" onclick="updateStatus(${b.id},'reading')">📖 読書中</button>
+          <button class="action-btn" onclick="updateStatus(${b.id},'done')">✅ 読了</button>
+          <button class="action-btn" onclick="updateStatus(${b.id},'tsundoku')">📚 積読に戻す</button>
+          <button class="action-btn" style="color:#ef9a9a" onclick="removeBook(${b.id})">🗑️ 削除</button>
+        </div>
+      </div>`).join('');
+  }
+
+  function renderStats() {
+    const total = books.length;
+    const done = books.filter(b => b.status === 'done').length;
+    const reading = books.filter(b => b.status === 'reading').length;
+    const tsundoku = books.filter(b => b.status === 'tsundoku').length;
+    const totalPages = books.filter(b => b.status === 'done').reduce((s, b) => s + b.pages, 0);
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statDone').textContent = done;
+    document.getElementById('statReading').textContent = reading;
+    document.getElementById('statTsundoku').textContent = tsundoku;
+    document.getElementById('statPages').textContent = totalPages.toLocaleString();
+  }
+
+  function calcYearly() {
+    const minutes = parseFloat(document.getElementById('diagMinutes').value) || 0;
+    const speed = parseFloat(document.getElementById('diagSpeed').value) || 0;
+    if (!minutes || !speed) { alert('値を入力してください'); return; }
+    const dailyPages = minutes * speed;
+    const monthlyPages = dailyPages * 30;
+    const yearlyPages = dailyPages * 365;
+    const avgPages = 250;
+    const monthly = (monthlyPages / avgPages).toFixed(1);
+    const yearly = (yearlyPages / avgPages).toFixed(0);
+    const level = yearly < 12 ? '初心者' : yearly < 24 ? '読書家' : yearly < 52 ? '本の虫' : '読書王';
+    document.getElementById('monthlyBooks').textContent = monthly;
+    document.getElementById('yearlyBooks').textContent = yearly;
+    document.getElementById('readingLevel').textContent = level;
+    document.getElementById('yearlyResult').classList.remove('hidden');
+  }
+
+  renderBooks();
+  renderStats();
+</script>
+</body>
+</html>
