@@ -3,7 +3,7 @@
   "short_name": "積読管理",
   "start_url": "/reading-pace-tracker/",
   "display": "standalone",
-  "background_color": "#1c1000",
+  "background_color": "#ffffff",
   "theme_color": "#ff9800",
   "scope": "/reading-pace-tracker/"
 }
