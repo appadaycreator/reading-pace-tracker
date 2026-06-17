@@ -10,7 +10,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#ff9800">
-  <meta name="description" content="ページ数・1日の読書時間から読了日を無料計算。積読本の管理と読書目標設定に役立つ。登録不要・完全無料でご利用いただけます。スマートフォン・PCどちらでも無料でお使いいただけます。">
+  <meta name="description" content="ページ数・1日の読書時間から読了日を無料計算。積読本の管理と読書目標設定に役立つ">
+<meta name="author" content="AppADayCreator">
   <link rel="canonical" href="https://appadaycreator.com/reading-pace-tracker/">
   <meta property="og:title" content="読書ペース計算【無料】積読管理・読了日を自動予測">
   <meta property="og:description" content="1日の読書ページ数から読了日を予測。積読本の管理、読書記録の保存も無料で対応。">
@@ -23,7 +24,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+  <!-- Consent Mode v2 -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});(function(){try{var k='cookie-consent-v2',o='cookie-consent';var c=localStorage.getItem(k);if(!c&&localStorage.getItem(o)==='1')c='granted';if(c){var s=c==='granted'?'granted':'denied';gtag('consent','update',{'analytics_storage':s,'ad_storage':s,'ad_user_data':s,'ad_personalization':s});}}catch(e){}})();</script>
+<!-- End Consent Mode v2 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDPNYD2875"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZDPNYD2875',{send_page_view:false});</script>
   <!-- Microsoft Clarity -->
@@ -118,7 +122,7 @@ button, .btn, .btn-primary, .option-btn, [role="button"] { min-height: 48px; min
 /* AdSense unfilled: collapse empty ad slots */
 ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!important;height:0!important}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"読書ペース計算・積読管理アプリは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料でご利用いただけます。登録・ログイン不要ですぐに使えます。"}},{"@type":"Question","name":"入力したデータはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"入力データはお使いのデバイス内にのみ保存されます。外部サーバーへの送信は行いません。"}},{"@type":"Question","name":"読書ペース計算・積読管理アプリの計算・診断結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"本ツールの結果はあくまで参考情報です。重要な判断の際は専門家にご相談ください。"}},{"@type":"Question","name":"どのような人が使っていますか？","acceptedAnswer":{"@type":"Answer","text":"初心者から専門家まで、多くの方にご利用いただいています。特に決断が必要な場面で活躍します。"}},{"@type":"Question","name":"結果をシェアできますか？","acceptedAnswer":{"@type":"Answer","text":"はい、診断結果はスクリーンショットやURLで友人・家族とシェアできます。"}},{"@type":"Question","name":"有料プランはありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ、すべての機能を完全無料でご利用いただけます。"}}]}</script>
+
 
 <script type="application/ld+json">
 {
@@ -127,7 +131,11 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
   "name": "appadaycreator",
   "url": "https://appadaycreator.com",
   "logo": "https://appadaycreator.com/logo.png",
-  "description": "無料Webサービス・診断ツール 180種類以上を運営"
+  "description": "無料Webサービス・診断ツール 180種類以上を運営",
+  "sameAs": [
+    "https://twitter.com/appadaycreate",
+    "https://appadaycreator.com"
+  ]
 }
 </script>
 <meta property="og:type" content="website">
@@ -173,6 +181,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 @media(max-width:480px){button,[class*=btn]{min-height:48px!important;font-size:15px!important;}input,select,textarea{font-size:16px!important;min-height:44px!important;}[class*=card],[class*=max-w]{padding:16px!important;}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://appadaycreator.com/"},{"@type":"ListItem","position":2,"name":"生産性","item":"https://appadaycreator.com/category/productivity/"},{"@type":"ListItem","position":3,"name":"読書ペース計算積読管理・読了日を自動予測","item":"https://appadaycreator.com/reading-pace-tracker/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"「読書ペース計算・積読管理アプリ」は無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料・登録不要です。"}},{"@type":"Question","name":"スマートフォンでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、モバイル対応済みです。"}}]}</script>
 </head>
 <body><a href="#main" class="sr-only">本文へスキップ</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -248,6 +257,10 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           <div class="progress-fill" id="progressFill" style="width:0%"></div>
         </div>
       </div>
+      <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+        <button class="btn-sm" onclick="copyPaceResultToClipboard()" aria-label="計算結果をクリップボードにコピー" style="background:#444; border:1px solid rgba(255,152,0,0.3); color:#fff;">📋 コピー</button>
+        <button class="btn-sm" onclick="window.print()" aria-label="ページを印刷する" style="background:#444; border:1px solid rgba(255,152,0,0.3); color:#fff;">🖨️ 印刷</button>
+      </div>
     </div>
   </section>
 
@@ -278,11 +291,14 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       </div>
       <button class="btn btn-sm" onclick="addBook()" aria-label="本を追加" style="align-self: flex-end;">追加</button>
     </div>
-    <div class="filter-tabs" id="filterTabs">
-      <button class="filter-tab active" data-filter="all" onclick="filterBooks('all')">全て</button>
-      <button class="filter-tab" data-filter="tsundoku" onclick="filterBooks('tsundoku')">📚 積読</button>
-      <button class="filter-tab" data-filter="reading" onclick="filterBooks('reading')">📖 読書中</button>
-      <button class="filter-tab" data-filter="done" onclick="filterBooks('done')">✅ 読了</button>
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+      <div class="filter-tabs" id="filterTabs" style="margin-bottom: 0;">
+        <button class="filter-tab active" data-filter="all" onclick="filterBooks('all')">全て</button>
+        <button class="filter-tab" data-filter="tsundoku" onclick="filterBooks('tsundoku')">📚 積読</button>
+        <button class="filter-tab" data-filter="reading" onclick="filterBooks('reading')">📖 読書中</button>
+        <button class="filter-tab" data-filter="done" onclick="filterBooks('done')">✅ 読了</button>
+      </div>
+      <button class="btn-sm" onclick="downloadBooksCSV()" aria-label="積読リストをCSVでダウンロード" style="background:#444; border:1px solid rgba(255,152,0,0.3); color:#fff;">📥 CSV</button>
     </div>
     <div class="book-list" id="bookList">
       <p style="color:#888;font-size:0.9rem;text-align:center;padding:1rem;">本を追加するとここに表示されます</p>
@@ -341,6 +357,10 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       <div style="margin-top:1rem;">
         <canvas id="yearlyChart" style="max-height:300px;"></canvas>
       </div>
+      <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+        <button class="btn-sm" onclick="copyYearlyResultToClipboard()" aria-label="年間読書ペース結果をクリップボードにコピー" style="background:#444; border:1px solid rgba(255,152,0,0.3); color:#fff;">📋 コピー</button>
+        <button class="btn-sm" onclick="window.print()" aria-label="ページを印刷する" style="background:#444; border:1px solid rgba(255,152,0,0.3); color:#fff;">🖨️ 印刷</button>
+      </div>
     </div>
   </section>
 
@@ -370,8 +390,6 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:1.5rem 1.75rem;margin:2rem 0" id="tool-desc-box">
   <h2 style="font-size:1.05rem;font-weight:800;color:#1e40af;margin:0 0 1rem">📋 このツールの詳細</h2>
   <p style="color:#374151;margin:0 0 .75rem;line-height:1.8">「📚 読書ペース計算・積読管理」は、日々のデータを記録・管理するための無料記録・管理ツールです。</p>
-  <p style="color:#374151;margin:0 0 .75rem;line-height:1.8">継続的に記録することで傾向やパターンが見えてきて、改善や意思決定の参考にできます。</p>
-  <p style="color:#374151;margin:0;line-height:1.8">データはブラウザに保存（ローカルストレージ）されるため、サーバーへの送信なく安心してご利用いただけます。</p>
 </div>
 <div style="background:#eaf4fb;border-left:4px solid #1976d2;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
   <h3 style="font-size:1.1rem;font-weight:800;color:#1e3a5f">このツールでできること</h3>
@@ -420,23 +438,36 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       </tr>
     </tbody>
   </table>
-  <p style="font-size:.78rem;color:#6b7280;margin:.5rem 0 0">※ 記載データは各出典の公表時点の情報です。最新情報は各公的機関の公式サイトをご確認ください。</p>
 </div>
 <!-- r20-tool-links -->
 <div id="tool-disclaimer" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.875rem">
   <p style="font-weight:700;color:#374151;margin:0 0 .5rem">⚠️ 計算結果の活用にあたって</p>
-  <p style="color:#4b5563;margin:0 0 .5rem;line-height:1.75">計算結果は参考値です。入力値や前提条件によって結果が変わります。重要な判断の際は最新の公式情報をご確認ください。</p>
   <ul style="margin:0;padding-left:1.25rem;color:#4b5563;line-height:1.9"><li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5;font-size:.85rem">消費者庁「くらしの安心ガイド」</a></li></ul>
 </div>
 <h2 id="faq-h" style="font-size:1.05rem;font-weight:700;margin-bottom:12px;border-left:4px solid #4f46e5;padding-left:10px;">よくある質問</h2>
   <dl style="line-height:1.8;">
-    <dt style="font-weight:600;margin-top:12px;">Q: この計算ツールはどんな場面で役立ちますか？</dt>
-    <dd style="margin-left:16px;color:#374151;">読書ペース計算積読管理・読了日を自動に関する費用・数値を手軽に試算できます。複数パターンを試して比較検討にご活用ください。</dd>
-    <dt style="font-weight:600;margin-top:12px;">Q: 計算結果の精度はどの程度ですか？</dt>
-    <dd style="margin-left:16px;color:#374151;">一般的な基準値をもとにした目安です。実際の結果は個人の状況・条件により異なります。重要な意思決定の際は専門家にもご相談ください。</dd>
-    <dt style="font-weight:600;margin-top:12px;">Q: スマートフォンでも使えますか？</dt>
-    <dd style="margin-left:16px;color:#374151;">はい、PC・スマートフォン・タブレットすべてに対応しています。ブラウザから登録不要・完全無料でご利用いただけます。</dd>
+    <dt style="font-weight:600;margin-top:12px;">Q: 読書ペースの計算はどのような仕組みですか？</dt>
+    <dd style="margin-left:16px;color:#374151;">1分間に何ページ読めるかを測定し、残りのページ数と1日の読書時間を掛け合わせて読了予定日を算出します。例えば1分1ページ・1日30分読書する場合、残り300ページの本は10日後に読了できる計算になります。読書速度は本の難易度や体調によって変動するため、定期的に速度を更新すると予測精度が上がります。算出される日数はあくまで目安ですが、読書計画を立てる上で非常に参考になります。ページ数だけでなく、章単位で進捗を記録するとより細かい管理が可能です。</dd>
+    <dt style="font-weight:600;margin-top:12px;">Q: 年間の読書目標をどのように設定すればいいですか？</dt>
+    <dd style="margin-left:16px;color:#374151;">まず1日に確保できる読書時間（通勤時間・就寝前など）を把握することが重要です。平均的な社会人が1冊（250ページ）を読む時間は約5〜8時間とされており、1日30分の読書を続けると年間12〜24冊が現実的な目標になります。最初から多い冊数を目標にすると挫折しやすいため、まず「月2冊」などの小さな目標から始めることをおすすめします。本のジャンル（小説・ビジネス書・技術書）によってページ数や読了時間が大きく異なるため、ジャンルのバランスも考慮するとよいでしょう。本ツールの年間ペース診断機能も目標設定に活用できます。</dd>
+    <dt style="font-weight:600;margin-top:12px;">Q: 積読を解消するコツはありますか？</dt>
+    <dd style="margin-left:16px;color:#374151;">積読解消の鍵は「完全に読もうとしない」意識の転換です。目次→まとめ→気になる章だけを読む「つまみ読み」でも十分な価値を得られる本は多くあります。また積読リストを「読みたい度」でソートし、今の興味に合った本を優先すると継続しやすくなります。本を積む場所をリビングやベッドサイドなど目に触れる場所に変えると、自然と手に取る機会が増えます。「積読は未来の自分へのプレゼント」と考えることで、罪悪感を持たずに管理できるようになります。本ツールでは積読リストを一覧で管理できるため、どれから読むかの整理に役立てていただけます。</dd>
+    <dt style="font-weight:600;margin-top:12px;">Q: 読書速度を上げるにはどうすればいいですか？</dt>
+    <dd style="margin-left:16px;color:#374151;">読書速度向上に最も効果的なのは「音声化（頭の中で読み上げる習慣）を減らすこと」です。黙読の際に音声化せず意味のかたまりで認識するトレーニングで、速度は1.5〜2倍になることがあります。指や定規で行を追いながら読む「ガイド読書法」も視線の無駄な動きを減らすために有効です。ただし速度を上げることで理解度が下がる場合もあるため、内容把握が重要な専門書や技術書では通常速度での精読が適しています。目的に合わせて速度を使い分けることが、長期的な読書力向上につながります。</dd>
+    <dt style="font-weight:600;margin-top:12px;">Q: 読んだ内容を記憶に残すためのコツはありますか？</dt>
+    <dd style="margin-left:16px;color:#374151;">エビングハウスの忘却曲線によると、人は学習後24時間で約67%の内容を忘れると言われています。読書内容を定着させるには、読み終えた直後に「3行で要約する」習慣が非常に効果的です。読んだ内容を誰かに説明するフェインマン・テクニックや、SNSで感想を発信することもアウトプットの一環として有効です。さらに1週間後に読み返す「間隔反復」を取り入れると、長期記憶として定着しやすくなります。本ツールのメモ機能を使って印象に残ったフレーズや学びを記録することも定着を助けます。</dd>
   </dl>
+</section>
+
+<section style="margin:1.5rem auto;max-width:760px;padding:0 1rem" aria-label="読書速度の科学と記憶定着を高める読み方">
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem 1.5rem">
+<h2 style="font-size:1rem;font-weight:700;color:#1e3a5f;margin:0 0 .75rem;padding-bottom:.5rem;border-bottom:2px solid #3b82f6">読書速度の科学と記憶定着を高める読み方</h2>
+<p style="color:#374151;line-height:1.85;margin:0 0 .75rem">日本人の平均読書速度は黙読で600〜700字/分（文化庁「国語に関する世論調査」参照）です。ビジネス書1冊（平均8万字）を通読するのに約2時間かかる計算になります。読書速度は「視野の広さ」「音声化（頭の中での読み上げ）の有無」「語彙力」の3要素に大きく依存します。</p>
+<p style="color:#374151;line-height:1.85;margin:0 0 .75rem">記憶定着率はエビングハウスの忘却曲線が示すとおり、学習後24時間で約67%、1週間後で約75%を忘れます。読んだ内容を定着させるには「5分以内のアウトプット（メモ・SNS投稿）」→「翌日復習」→「1週間後再読」のサイクルが効果的です。ノーベル賞受賞者も実践する「フェインマン・テクニック」（理解した内容を子どもに説明する感覚でアウトプット）は記憶定着率を大幅に高めます。</p>
+<p style="color:#374151;line-height:1.85;margin:0 0 .75rem">読書速度を高める方法として、「指使いトレーニング」（指で行を追いながら読む）が速読に有効という研究結果があります。ただし超高速読書（10,000字/分以上）は「スキミング」（要点の拾い読み）に近く、細部の理解度が通常速度の30〜50%に低下するとする批判的研究も存在します。目的に応じた速度調整が重要です。</p>
+<h3 style="font-size:.9rem;font-weight:700;color:#1f2937;margin:.75rem 0 .5rem">読書スタイル別の最適アプローチ</h3>
+<p style="color:#374151;line-height:1.85;margin:0">【情報収集目的】：目次→まとめ→気になる章の順にスキミング（全体把握30分）。【深い理解目的】：通常速度で精読＋章末まとめノート。【語彙強化目的】：音読（400字/分以下）が語彙・表現の定着に最適。読む目的を明確にすることで、最適な読書速度と方法を選択できます。</p>
+</div>
 </section>
 </main>
 
@@ -445,27 +476,25 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
   <h2 style="font-size:16px;font-weight:700;color:#fff;margin:0 0 16px;text-align:center;">❓ よくある質問（FAQ）</h2>
   <div style="max-width:680px;margin:0 auto;">
     <details style="border:1px solid rgba(255,152,0,0.15);border-radius:8px;margin-bottom:8px;overflow:hidden;">
-      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. この計算ツールはどのような数式・ロジックを使っていますか？ <span>▼</span></summary>
-      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">一般的に公表されている計算式や統計データを基に計算しています。結果はあくまで参考値です。専門家への相談もあわせてお勧めします。</p>
+      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 読了日はどのように予測していますか？ <span>▼</span></summary>
+      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">総ページ数から現在の読了ページを引いた残りを、1日に読む目標ページ数で割って必要日数を求め、読了予定日を算出します。1分あたりの読速を入力すれば必要な読書時間も逆算できます。</p>
     </details>
     <details style="border:1px solid rgba(255,152,0,0.15);border-radius:8px;margin-bottom:8px;overflow:hidden;">
-      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 計算結果をPDF・メモとして保存できますか？ <span>▼</span></summary>
-      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">現在、PDF出力機能は非対応ですが、ブラウザの印刷機能（Ctrl+P）でページ全体を保存いただけます。</p>
+      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 積読リストや読書記録は保存できますか？ <span>▼</span></summary>
+      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">登録した本のタイトル・ページ数・読書中/積読などのステータスはブラウザに保存され、次回アクセス時も一覧で確認できます。印刷機能（Ctrl+P）を使えば読書計画をPDFとして書き出せます。</p>
     </details>
+    
+    
     <details style="border:1px solid rgba(255,152,0,0.15);border-radius:8px;margin-bottom:8px;overflow:hidden;">
-      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. このサービスは無料で使えますか？ <span>▼</span></summary>
-      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">はい、完全無料でご利用いただけます。登録・ログイン不要で、すぐにお使いいただけます。</p>
-    </details>
-    <details style="border:1px solid rgba(255,152,0,0.15);border-radius:8px;margin-bottom:8px;overflow:hidden;">
-      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 入力したデータはどこに保存されますか？ <span>▼</span></summary>
-      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">入力データはサーバーに送信されません。お使いのブラウザ上でのみ処理されます。</p>
-    </details>
-    <details style="border:1px solid rgba(255,152,0,0.15);border-radius:8px;margin-bottom:8px;overflow:hidden;">
-      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 何度でも使えますか？ <span>▼</span></summary>
-      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">はい、何度でも無料でご利用いただけます。条件を変えてお試しいただけます。</p>
+      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#ffb74d;background:#3a3a3a;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 複数の本のペースをまとめて管理できますか？ <span>▼</span></summary>
+      <p style="padding:12px 16px;font-size:13px;color:#ccc;margin:0;background:#2a2a2a;">冊数の制限なく本を追加でき、それぞれの読了日や進捗ページを個別に管理できます。1日の読書ページ数を変えて何度でも再計算でき、月間の読書目標設定にも活用いただけます。</p>
     </details>
   </div>
 </section>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin:20px 0" id="related-blog">
+  <p style="font-weight:800;font-size:.9rem;color:#1e293b;margin:0 0 10px">📚 関連コラム</p>
+  <ul style="margin:0;padding-left:0;list-style:none"><li style="margin:0 0 6px"><a href="/blog/household-budget-guide/" style="color:#4f46e5;font-size:.88rem;text-decoration:none;">📖 家計管理の基本ガイド</a></li><li style="margin:0 0 6px"><a href="/blog/rogo-2000man-guide/" style="color:#4f46e5;font-size:.88rem;text-decoration:none;">📖 老後2,000万円問題の解決策</a></li></ul>
+</div>
 </div>
 
 <div class="max-w-2xl mx-auto px-4"><section  style="background:#2a2a2a;border:1px solid rgba(255,152,0,0.15);padding:16px;text-align:center;font-size:12px;color:#ffb74d;border-radius:14px;margin-bottom:16px;">
@@ -762,6 +791,71 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
     document.getElementById('yearlyResult').classList.remove('hidden');
   }
 
+  // 読了日計算結果をクリップボードにコピー
+  function copyPaceResultToClipboard() {
+    const remain = document.getElementById('remainPages').textContent;
+    const days = document.getElementById('remainDays').textContent;
+    const date = document.getElementById('finishDate').textContent;
+    const speed = document.getElementById('speedMin').textContent;
+    const pct = document.getElementById('progressPct').textContent;
+
+    const text = `📚 読書ペース計算結果\n\n残りページ数: ${remain}ページ\n読了まであと: ${days}日\n読了予定日: ${date}\n読書進捗: ${pct}\n読書速度目安: ${speed}ページ/分`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      alert('計算結果をクリップボードにコピーしました！');
+    }).catch(() => {
+      alert('クリップボードへのコピーに失敗しました');
+    });
+  }
+
+  // 年間読書ペース結果をクリップボードにコピー
+  function copyYearlyResultToClipboard() {
+    const monthly = document.getElementById('monthlyBooks').textContent;
+    const yearly = document.getElementById('yearlyBooks').textContent;
+    const level = document.getElementById('readingLevel').textContent;
+    const desc = document.getElementById('levelDescText').textContent;
+
+    const text = `📊 年間読書ペース診断結果\n\n月間読了冊数: ${monthly}冊/月\n年間読了冊数: ${yearly}冊/年\n読書レベル: ${level}\n\n${desc}`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      alert('診断結果をクリップボードにコピーしました！');
+    }).catch(() => {
+      alert('クリップボードへのコピーに失敗しました');
+    });
+  }
+
+  // 積読リストをCSVでダウンロード
+  function downloadBooksCSV() {
+    if (!books.length) {
+      alert('ダウンロードする本がありません');
+      return;
+    }
+
+    const headers = ['タイトル', 'ページ数', 'ステータス', '現在のページ', '進捗率', '登録日', '読了日'];
+    const statusMap = { tsundoku: '積読', reading: '読書中', done: '読了' };
+
+    const rows = books.map(b => {
+      const pct = b.pages > 0 ? Math.round((b.currentPage || 0) / b.pages * 100) : 0;
+      return [
+        `"${b.title.replace(/"/g, '""')}"`,
+        b.pages,
+        statusMap[b.status],
+        b.currentPage || 0,
+        pct + '%',
+        b.addedAt,
+        b.finishedAt || '-'
+      ];
+    });
+
+    const csv = [headers, ...rows].map(row => row.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', '積読リスト_' + new Date().toISOString().split('T')[0] + '.csv');
+    link.click();
+  }
+
   // Enterキーで本を追加
   document.getElementById('bookTitle').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') addBook();
@@ -788,213 +882,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 </div>
 
     
-    <div class="max-w-2xl mx-auto px-4">
-<!-- phase8-social-proof -->
-    <div class="card" style="margin-bottom:1rem">
-      <h3 style="font-size:.875rem;font-weight:700;color:#ffb74d;margin-bottom:.75rem">⭐ 利用者の声</h3>
-      <div style="display:flex;flex-direction:column;gap:.75rem">
-        <div style="background:#3a3a3a;border:1px solid rgba(255,152,0,0.15);border-radius:8px;padding:.75rem">
-          <p style="font-size:.75rem;color:#ccc">「読んだページ数を毎日記録してグラフにすることで、読書のペースが上がりました！」</p>
-          <p style="font-size:.75rem;color:#ffcc80;margin-top:.25rem">— 田中さん（30代・会社員）★★★★★</p>
-        </div>
-        <div style="background:#3a3a3a;border:1px solid rgba(255,152,0,0.15);border-radius:8px;padding:.75rem">
-          <p style="font-size:.75rem;color:#ccc">「無料でここまで読書記録を管理できるとは思いませんでした。積読解消に役立っています。」</p>
-          <p style="font-size:.75rem;color:#ffcc80;margin-top:.25rem">— 佐藤さん（40代・主婦）★★★★★</p>
-        </div>
-        <div style="background:#3a3a3a;border:1px solid rgba(255,152,0,0.15);border-radius:8px;padding:.75rem">
-          <p style="font-size:.75rem;color:#ccc">「登録不要でサクッと使えるのが良いです。また利用します。」</p>
-          <p style="font-size:.75rem;color:#ffcc80;margin-top:.25rem">— 山本さん（20代・学生）★★★★☆</p>
-        </div>
-      </div>
-      <div style="display:flex;gap:.5rem;margin-top:1rem">
-        <a href="https://line.me/R/share?text=読書ペース計算積読管理・読了日を自動予測%20https://appadaycreator.com/reading-pace-tracker/" target="_blank" rel="noopener"
-           style="flex:1;display:block;text-align:center;background:#06C755;color:white;padding:8px;border-radius:8px;font-size:12px;font-weight:bold;text-decoration:none;">
-          LINEでシェア
-        </a>
-        <a href="https://twitter.com/intent/tweet?text=読書ペース計算積読管理・読了日を自動予測&url=https://appadaycreator.com/reading-pace-tracker/&via=appadaycreator" target="_blank" rel="noopener"
-           style="flex:1;display:block;text-align:center;background:#000;color:white;padding:8px;border-radius:8px;font-size:12px;font-weight:bold;text-decoration:none;">
-          Xでシェア
-        </a>
-      </div>
-    </div>
-    <div style="background:#2a2a2a;border:1px solid rgba(255,152,0,0.15);border-radius:10px;padding:16px;margin:10px 0;">
-            <h2 style="font-size:14px;font-weight:700;margin-bottom:8px;color:#ffb74d;">🔍 計算・判定の仕組み</h2>
-            <p style="font-size:12px;color:#ccc;line-height:1.7;">読書スピード（ページ/時間）と目標ページ数から、目標達成に必要な日数を逆算します。</p>
-            <p style="font-size:11px;color:#ffcc80;margin-top:6px;">※ 本ツールの結果はあくまで参考情報です。重要な判断の際は専門家にご相談ください。</p>
-        </div>
-<div id="injected-wrapper" style="max-width:700px;margin:0 auto;padding:0 16px;">
-        <!-- 使い方セクション（B2: 使い方3ステップ）-->
-        <div style="background:#2a2a2a;border:1px solid rgba(255,152,0,0.15);border-radius:10px;padding:16px;margin:12px 0;">
-            <h2 style="font-size:15px;font-weight:700;margin-bottom:10px;color:#ffb74d;">📖 使い方</h2>
-            <ol style="padding-left:20px;font-size:13px;color:#ccc;line-height:1.9;">
-                <li><strong style="color:#ffb74d;">入力</strong>：画面の入力フォームに必要な情報を入力してください</li>
-                <li><strong style="color:#ffb74d;">計算・診断</strong>：ボタンをクリックすると即座に結果が表示されます</li>
-                <li><strong style="color:#ffb74d;">活用</strong>：結果を参考に、次のアクションを検討してください</li>
-            </ol>
-        </div>
-</div>
-<!-- r31-use-cases -->
-<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
-<h2 style="font-size:1.125rem;font-weight:700;margin:0 0 1rem;color:#1e293b;border-left:4px solid #4f46e5;padding-left:10px">こんな方・シーンで役立ちます</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem">
-<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">👤</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">はじめてご利用の方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">シンプルな操作で目的の情報・計算結果をすぐに得たい方に。会員登録・ダウンロード不要でご利用いただけます。</div>
-</div>
-<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">📱</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">スマートフォンでサッと調べたい方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">通勤・移動中や外出先からでもスムーズに利用できるモバイル最適化設計です。</div>
-</div>
-<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">👨‍👩‍👦</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">家族で情報を共有したい方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">家族全員で使えるシンプルなインターフェースで、大切な情報を共有・管理したい方に。</div>
-</div>
-<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">🔍</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">複数の選択肢を比較検討したい方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">条件を変えながら何度でも計算・診断して、複数のシナリオを客観的に比較したい方に。</div>
-</div>
-</div>
-</div>
-<!-- r31-extended-faq -->
-<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
-<div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.08)">
-<h2 style="font-size:1.05rem;font-weight:700;margin:0 0 1rem;border-left:4px solid #4f46e5;padding-left:10px;color:#1e293b">よくある質問（詳細）</h2>
-<div style="margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid #f1f5f9">
-<p style="font-size:.9rem;font-weight:700;color:#1e293b;margin:0 0 .5rem">Q: 計算結果の精度はどのくらいですか？</p>
-<p style="font-size:.85rem;color:#475569;line-height:1.8;margin:0">A: 本ツールは公的機関発表の標準的な数値・係数を使用しています。ただし個人の状況・条件によって実際の結果は異なる場合があります。目安・参考値としてご活用いただき、重要な判断の際は専門家へのご相談をお勧めします。</p>
-</div>
-<div style="margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid #f1f5f9">
-<p style="font-size:.9rem;font-weight:700;color:#1e293b;margin:0 0 .5rem">Q: 入力したデータのプライバシーは守られますか？</p>
-<p style="font-size:.85rem;color:#475569;line-height:1.8;margin:0">A: はい。本ツールはすべての処理をお使いのブラウザ内で完結させています。入力したデータはサーバーに送信・保存されることはありません。個人情報の漏洩リスクなく安心してご利用いただけます。</p>
-</div>
-<div style="margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid #f1f5f9">
-<p style="font-size:.9rem;font-weight:700;color:#1e293b;margin:0 0 .5rem">Q: スマートフォンでも問題なく使えますか？</p>
-<p style="font-size:.85rem;color:#475569;line-height:1.8;margin:0">A: はい。すべてのデバイス（スマートフォン・タブレット・PC）に最適化したレスポンシブデザインを採用しています。画面サイズに合わせて自動でレイアウトが調整されます。</p>
-</div>
-<div style="margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid #f1f5f9">
-<p style="font-size:.9rem;font-weight:700;color:#1e293b;margin:0 0 .5rem">Q: このツールは無料でいつまでも使えますか？</p>
-<p style="font-size:.85rem;color:#475569;line-height:1.8;margin:0">A: AppADayCreatorのすべてのツールは完全無料でご提供しています。広告収入によって運営しているため、ユーザーの皆様は料金なしでご利用いただけます。今後も無料でのご提供を続けることを予定しています。</p>
-</div>
 
-</div>
-</div>
-<!-- r31-tool-notice -->
-<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
-<div style="padding:1.25rem 1.5rem;background:#fef3c7;border:1px solid #fbbf24;border-radius:.75rem">
-<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#92400e">⚠️ ご利用時の注意事項</h3>
-<ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#78350f;line-height:2">
-<li style='margin-bottom:.4rem'>本ツールの結果はあくまで参考情報です。実際の状況に応じてご判断ください</li>
-<li style='margin-bottom:.4rem'>重要な決定（医療・法律・財務等）を行う際は必ず専門家にご相談ください</li>
-<li style='margin-bottom:.4rem'>入力データはサーバーに送信されず、すべてブラウザ内で処理されます</li>
-<li style='margin-bottom:.4rem'>ブラウザの種類・バージョンにより一部機能が正常に動作しない場合があります</li>
-<li style='margin-bottom:.4rem'>本ツールの計算・診断ロジックは定期的に更新しています</li>
-</ul>
-</div>
-</div>
-<!-- r31-tool-references -->
-<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
-<div style="padding:1.25rem 1.5rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#1e293b">📚 関連する公的情報・参考リンク</h3>
-<ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#374151;line-height:1.9">
-<li style='margin-bottom:.5rem'><a href="https://www.gov-online.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">政府広報オンライン</a> — くらしに役立つ最新の政策・制度・行政情報</li>
-<li style='margin-bottom:.5rem'><a href="https://www.e-gov.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">e-Gov 電子政府の総合窓口</a> — 法令・行政手続・公的制度の詳細情報</li>
-<li style='margin-bottom:.5rem'><a href="https://www.cao.go.jp/consumer/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">消費者庁</a> — 消費者の権利・安全・表示に関する公的情報</li>
-<li style='margin-bottom:.5rem'><a href="https://www.nhk.or.jp/life/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">NHK くらし解説</a> — 暮らしのさまざまな疑問をわかりやすく解説</li>
-</ul>
-</div>
-</div>
-<!-- r31-tool-about -->
-<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
-<div style="padding:1.25rem 1.5rem;background:#f0f9ff;border:1px solid #bae6fd;border-radius:.75rem">
-<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#0c4a6e">ℹ️ このツールについて</h3>
-<p style="margin:0;font-size:.88rem;color:#0c4a6e;line-height:1.9">「📚 読書ペース計算・積読管理」はAppADayCreatorが提供する無料Webツールです。ライフスタイルに関する情報を素早く手軽に確認できます。会員登録・アプリインストール不要で、ブラウザからすぐにご利用いただけます。すべての処理はブラウザ内で完結するため、入力した情報が外部サーバーに送信されることはなく、プライバシーも保護されます。スマートフォン・タブレット・PCのすべてに対応したレスポンシブデザインを採用し、外出先や通勤中でも快適にご利用いただけます。AppADayCreatorでは、日常生活のあらゆるシーンで役立つWebツールを400本以上無料で提供しています。金融・健康・育児・キャリア・旅行など幅広いカテゴリのツールをご活用ください。</p>
-</div>
-</div>
-<!-- r31-extra-guide -->
-<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
-<div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.06)">
-<h2 style="font-size:1.05rem;font-weight:700;margin:0 0 1rem;border-left:4px solid #10b981;padding-left:10px;color:#1e293b">ライフスタイルツールの活用ガイド</h2>
-<p style="font-size:.88rem;color:#475569;line-height:1.9;margin:0 0 .75rem">
-本ツール「📚 読書ペース計算・積読管理」は、ライフスタイルに関連する情報の確認・計算・診断をブラウザ上で手軽に行えるように設計されています。
-初回利用時にはまずフォームや入力欄に必要な情報を入力し、「計算」「診断」「確認」などのボタンを押してください。
-結果はリアルタイムで表示され、条件を変えながら何度でも再計算・再診断をお試しいただけます。
-ご不明な点があった場合は、各入力項目の横にある説明文や「？」アイコンをご確認ください。
-</p>
-<p style="font-size:.88rem;color:#475569;line-height:1.9;margin:0 0 .75rem">
-スマートフォンからのご利用でも、PC同様にすべての機能をお使いいただけます。
-スマートフォンのホーム画面に本ページを追加（ブックマーク）すれば、アプリのように素早くアクセスできます。
-ブラウザの印刷機能（Ctrl+P または右上メニュー）を使えば、結果をPDF形式で保存・印刷することが可能です。
-計算結果のスクリーンショットを家族・友人・専門家と共有するのもお勧めです。
-</p>
-<h3 style="font-size:.95rem;font-weight:700;margin:1rem 0 .6rem;color:#1e293b">AppADayCreator のツールの特徴</h3>
-<ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#475569;line-height:2.1">
-<li><strong>完全無料・登録不要</strong> — アカウント作成・メールアドレス登録なしで今すぐご利用いただけます</li>
-<li><strong>プライバシー完全保護</strong> — 入力したデータはすべてブラウザ内で処理され、外部サーバーには一切送信されません</li>
-<li><strong>マルチデバイス完全対応</strong> — スマートフォン・タブレット・PCすべてで最適なレイアウトで表示されます</li>
-<li><strong>定期的なコンテンツ更新</strong> — 法改正・制度変更・最新データに対応した情報を随時更新しています</li>
-<li><strong>広告による持続的な無料運営</strong> — 広告収入によって運営しているため、ユーザーの皆様は永続的に無料でご利用いただけます</li>
-<li><strong>400本以上のツールを無料提供</strong> — お金・健康・育児・キャリア・旅行・住まいなど幅広いジャンルのツールをご活用ください</li>
-</ul>
-<h3 style="font-size:.95rem;font-weight:700;margin:1.25rem 0 .6rem;color:#1e293b">関連ツールのご紹介</h3>
-<p style="font-size:.88rem;color:#475569;line-height:1.9;margin:0">
-AppADayCreatorでは、本ツール以外にもライフスタイルカテゴリの便利なツールを多数ご提供しています。
-家計管理・健康記録・育児サポート・キャリア計画・旅行準備・住まいの整理など、日常生活のさまざまなシーンで役立つツールがそろっています。
-ぜひトップページから他のツールもご活用ください。すべて完全無料・登録不要でお使いいただけます。
-本ツールへのご意見・ご感想はお問い合わせページからお送りいただけます。皆様のフィードバックが品質改善につながります。
-</p>
-</div>
-</div>
-
-<!-- rakuten-affiliate-block -->
-    <div style="border:1px solid #BF0000;background:#fff9f9;border-radius:10px;padding:14px;margin:12px auto;max-width:480px;text-align:center;">
-      <p style="font-size:0.85rem;color:#4b5563;margin-bottom:8px;">🛒 関連商品を楽天市場で探す</p>
-      <a href="https://hb.afl.rakuten.co.jp/ichiba/541ad0d2.ce2bed12.541ad0d3.a1a2318c/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E8%25AA%25AD%25E6%259B%25B8%2520%25E9%2580%259F%25E8%25AA%25AD%2520%25E6%259C%25AC%2F&link_type=text" target="_blank" rel="nofollow sponsored noopener"
-         style="display:inline-block;background:#BF0000;color:white;padding:10px 24px;border-radius:8px;font-weight:bold;font-size:14px;text-decoration:none;">
-        楽天市場で「読書 速読 本」を検索 →
-      </a>
-    </div>
-<!-- phase10-rakuten-updated -->
-
-<div style="border-top:1px solid #e5e7eb;padding:14px 16px 18px;background:#fff;">
-  <p style="text-align:center;font-size:11px;font-weight:600;color:#94a3b8;margin:0 0 10px;">スポンサーリンク</p>
-  <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:700px;margin:0 auto;">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR6+GFV6NE+3CJQ+64C3M" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">新作続々追加！オーディオブック聴くなら - audiobook.jp</a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B3VR6+GFV6NE+3CJQ+64C3M" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">日々の生活にハッピーをプラス！《ハピタス》</a><img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ7+18PTPM+1O96+699KI" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">《ヨガ》をはじめてみませんか？ホットヨガスタジオLAVA</a><img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3WJ7+18PTPM+1O96+699KI" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=457C4C+C23BCA+0K+10FXXU" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">アフィリエイトならA8.net</a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=457C4C+C23BCA+0K+10FXXU" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">【じゃらん】国内25,000軒の宿をネットで予約OK！2％ポイント還元！</a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ6+FIIWRU+1IRY+1TKOKI" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">ファイナンシャルアカデミー「お金の教養講座」</a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3WJ6+FIIWRU+1IRY+1TKOKI" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJA+86RVSA+3XCC+64C3M" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">松井証券</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3WJA+86RVSA+3XCC+64C3M" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR6+G0ZCIY+1QM6+HZAGY" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">働くママを応援中♪栄養士の献立で簡単バランスごはん♪</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3VR6+G0ZCIY+1QM6+HZAGY" alt="">
-  </div>
-</div>
-<footer>
-  <div class="links">
-    <a href="https://appadaycreator.com/book-forest/">本の森</a>
-    <a href="https://appadaycreator.com/book-recommendation/">本の推薦</a>
-    <a href="https://appadaycreator.com/flashcard-master/">フラッシュカード</a>
-    <a href="https://appadaycreator.com/okr-tracker/lp/">OKRトラッカー</a>
-    <a href="https://appadaycreator.com/goal-roadmap-maker/">目標ロードマップ</a>
-  </div>
-  <p>© 2026 AppADayCreator</p>
-
-        
-                <div style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:12px 16px;margin:0 auto;max-width:720px;font-size:11px;color:#64748b;text-align:center;line-height:1.7;">
-  <strong>免責事項</strong>：本ツールの計算・診断結果はあくまで参考情報です。本サービスの利用により生じた損害について、当サイトは一切の責任を負いません。
-</div>
-  <div style="margin-top:8px;"><a href="privacy-policy.html" style="color:inherit;font-size:11px;opacity:0.7;text-decoration:underline;">プライバシーポリシー</a></div>
-<p style="text-align:center;font-size:10px;color:#9ca3af;margin-top:3px;">最終更新: 2026年5月 | 本サービスはアフィリエイト広告を掲載しています</p>
-<div style="text-align:center;margin:24px auto;max-width:760px;padding:0 16px">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}</script>
-</div>
-</footer>
-
-</div>
 <div style="text-align:center;padding:10px 16px 14px;background:#eef2ff;border-top:2px solid #c7d2fe;margin-top:8px">
 <a href="/blog/" style="color:#4f46e5;font-size:.85rem;font-weight:700">📖 マネー・育児・キャリアのコラムを読む →</a>
 </div>
@@ -1017,5 +905,21 @@ AppADayCreatorでは、本ツール以外にもライフスタイルカテゴリ
   }, {passive:true});
 })();
 </script>
+<div style="text-align:center;margin:20px auto;max-width:728px;padding:0 16px">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}</script>
+</div>
+<!-- r31-cookie-banner -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;z-index:9999;font-size:.85rem;box-shadow:0 -2px 10px rgba(0,0,0,.3)">
+<div>当サイトはCookieおよびGoogle Analyticsを使用しています。<a href="/privacy-policy.html" style="color:#60a5fa;text-decoration:underline">プライバシーポリシー</a>をご確認ください。</div>
+<button onclick="document.getElementById('cookie-banner').style.display='none';window.grantConsent && window.grantConsent()" style="background:#3b82f6;color:#fff;border:none;padding:.5rem 1.25rem;border-radius:.375rem;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap">同意して閉じる</button>
+</div>
+<script>if(localStorage.getItem('cookie-consent'))document.getElementById('cookie-banner').style.display='none'</script>
+<!-- r46-org-footer -->
+<div style="text-align:center;font-size:11px;color:#9ca3af;padding:6px 0 4px;background:#f8fafc;border-top:1px solid #e5e7eb;">
+  運営: <a href="https://appadaycreator.com/" style="color:#9ca3af;text-decoration:none;">AppADayCreator</a> | <a href="https://tech-and-brace.co.jp/" rel="noopener" style="color:#9ca3af;text-decoration:none;">株式会社Tech&amp;Brace</a>
+</div>
+<script src="/assets/consent-mode.js"></script>
+<div style="text-align:center;padding:12px 16px;font-size:.9em;"><a href="https://twitter.com/intent/tweet?url=https%3A//appadaycreator.com/reading-pace-tracker/&text=%E8%AA%AD%E6%9B%B8%E3%83%9A%E3%83%BC%E3%82%B9%E8%A8%88%E7%AE%97%E3%83%BB%E7%A9%8D%E8%AA%AD%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA" target="_blank" rel="noopener" style="margin:4px 10px;color:#1da1f2;">𝕏でシェア</a><a href="https://line.me/R/share?text=%E8%AA%AD%E6%9B%B8%E3%83%9A%E3%83%BC%E3%82%B9%E8%A8%88%E7%AE%97%E3%83%BB%E7%A9%8D%E8%AA%AD%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA+https%3A//appadaycreator.com/reading-pace-tracker/" target="_blank" rel="noopener" style="margin:4px 10px;color:#06c755;">LINEで送る</a></div>
 </body>
 </html>
